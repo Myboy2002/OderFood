@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">OderFood</string>
+    <!--tránh dính việc đa nền tảng sau này nên tạo đoạn nhắc vào đây-->
+    <string name="dangky">Đăng ký</string>
+    <string name="tendangnhap">Tên đăng nhập</string>
+    <string name="matkhau">Mật khẩu</string>
+    <string name="ngaysinh">Ngày sinh</string>
+    <string name="cancuoccongdan">Căn cước công dân</string>
+    <string name="dongy">Đồng ý</string>
+    <string name="thoat">Thoát</string>
+</resources>
