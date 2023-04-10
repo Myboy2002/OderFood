@@ -41,19 +41,30 @@ public class CreateDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String tbKhachHang = "CREATE TABLE" + tb_KhachHang + " ( " + tb_KhachHang_MaKH + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+        String tbKhachHang = "CREATE TABLE " + tb_KhachHang + " ( " + tb_KhachHang_MaKH + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_KhachHang_TenKH + " TEXT, " + tb_KhachHang_MkKH + " TEXT, " + tb_KhachHang_GioiTinh + " TEXT, "
                 + tb_KhachHang_NgaySinh + " TEXT, " + tb_KhachHang_CMND + " INTEGER )";
-        String tbLoaiMon = "CREATE TABLE" + tb_LoaiMon + " ( " + tb_LoaiMon_MaLoai + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+        String tbLoaiMon = "CREATE TABLE " + tb_LoaiMon + " ( " + tb_LoaiMon_MaLoai + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_LoaiMon_TenLoai + " TEXT )";
-        String tbMonAn = "CREATE TABLE" + tb_MonAn + " ( " + tb_MonAn_MaMonAn + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+        String tbMonAn = "CREATE TABLE " + tb_MonAn + " ( " + tb_MonAn_MaMonAn + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_MonAn_TenMonAn + " TEXT, " + tb_MonAn_MaLoai + " INTEGER " + tb_MonAn_Gia + " TEXT )";
-        String tbChiTietDatMon = "CREATE TABLE" + tb_ChiTietDatMon + " ( " + tb_ChiTietDatMon_MaDatMon + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+        String tbChiTietDatMon = "CREATE TABLE " + tb_ChiTietDatMon + " ( " + tb_ChiTietDatMon_MaDatMon + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_ChiTietDatMon_MaKH + " INTEGER, " + tb_ChiTietDatMon_MaMonAn + " INTEGER, " + tb_ChiTietDatMon_SoLuong  ;
+
+        /*Thực thi truy vấn*/
+        db.execSQL(tbKhachHang);
+        db.execSQL(tbLoaiMon);
+        db.execSQL(tbMonAn);
+        db.execSQL(tbChiTietDatMon);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
 
+    }
+    /*Mở kết nối CSDL*/
+    public SQLiteDatabase open(){
+        return this.getWritableDatabase();
     }
 }
