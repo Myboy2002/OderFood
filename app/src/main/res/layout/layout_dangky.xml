@@ -33,6 +33,7 @@
         >
 
         <EditText
+            android:id="@+id/edTenDangNhapDK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -47,6 +48,7 @@
             />
 
         <EditText
+            android:id="@+id/edMatKhauDK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -61,6 +63,7 @@
             android:inputType="textPassword"
             />
         <RadioGroup
+            android:id="@+id/RgGioiTinh"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -80,6 +83,7 @@
         </RadioGroup>
 
         <EditText
+            android:id="@+id/edNgaySinhDK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -93,6 +97,7 @@
             />
 
         <EditText
+            android:id="@+id/edCCCĐK"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white"
@@ -112,6 +117,7 @@
             >
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDongYDK"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/dongy"
@@ -122,6 +128,7 @@
                 />
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnThoatDk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/thoat"

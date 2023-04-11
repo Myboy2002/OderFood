@@ -47,7 +47,7 @@ public class CreateDatabase extends SQLiteOpenHelper {
         String tbLoaiMon = "CREATE TABLE " + tb_LoaiMon + " ( " + tb_LoaiMon_MaLoai + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_LoaiMon_TenLoai + " TEXT )";
         String tbMonAn = "CREATE TABLE " + tb_MonAn + " ( " + tb_MonAn_MaMonAn + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + tb_MonAn_TenMonAn + " TEXT, " + tb_MonAn_MaLoai + " INTEGER " + tb_MonAn_Gia + " TEXT )";
+                + tb_MonAn_TenMonAn + " TEXT, " + tb_MonAn_MaLoai + " INTEGER, " + tb_MonAn_Gia + " TEXT )";
         String tbChiTietDatMon = "CREATE TABLE " + tb_ChiTietDatMon + " ( " + tb_ChiTietDatMon_MaDatMon + " INTEGER PRIMARY KEY AUTOINCREMENT, "
                 + tb_ChiTietDatMon_MaKH + " INTEGER, " + tb_ChiTietDatMon_MaMonAn + " INTEGER, " + tb_ChiTietDatMon_SoLuong  ;
 
